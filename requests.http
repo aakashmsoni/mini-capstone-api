@@ -8,4 +8,12 @@ GET http://localhost:3000/all_products/:id
 
 ### Products Create
 POST http://localhost:3000/all_products.json
+Content-Type: application/json
+
+{
+  "name": "Yeti Mug",
+  "price": 23,
+  "image_url": "http://imghost.com/13556",
+  "description": "Keeps liquids hot or cold"
+}
 
