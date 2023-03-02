@@ -3,5 +3,5 @@
 GET http://localhost:3000/all_products
 
  
-### Products under 20
-GET http://localhost:3000/products_under_20
+### Products Show
+GET http://localhost:3000/all_products/:id

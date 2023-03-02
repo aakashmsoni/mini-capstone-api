@@ -2,7 +2,7 @@ require "test_helper"
 
 class ProductsControllerTest < ActionDispatch::IntegrationTest
   test "index" do
-    get "/products.json"
+    get "/all_products.json"
     assert_response 200
 
     data = JSON.parse(response.body)
@@ -10,7 +10,7 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "show" do
-    get "/products/#{Product.first.id}.json"
+    get "/all_products/#{Product.first.id}.json"
     assert_response 200
 
     data = JSON.parse(response.body)
