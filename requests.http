@@ -5,3 +5,7 @@ GET http://localhost:3000/all_products
  
 ### Products Show
 GET http://localhost:3000/all_products/:id
+
+### Products Create
+POST http://localhost:3000/all_products.json
+
