@@ -20,4 +20,7 @@ Rails.application.routes.draw do
 
   # Product Update
   patch "/products/:id.json" => "products#update"
+
+  # Product Delete
+  delete "products/:id.json" => "products#destroy"
 end

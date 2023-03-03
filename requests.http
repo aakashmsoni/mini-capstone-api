@@ -28,3 +28,5 @@ Content-Type: application/json
   "name": "Crystal Skull"
 }
 
+### Product Delete
+DELETE http://localhost:3000/products/8.json 

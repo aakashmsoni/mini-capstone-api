@@ -30,11 +30,17 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
 
   test "update" do
     product = Product.first
-    pp Product.first.id
     patch "/products/#{product.id}.json", params: { name: "Crystal Skull" }
     assert_response 200
 
     data = JSON.parse(response.body)
     assert_equal "Crystal Skull", data["name"]
+  end
+
+  test "destroy" do
+    assert_difference "Product.count", -1 do
+      delete "/products/#{Product.first.id}.json"
+      assert_response 200
+    end
   end
 end
