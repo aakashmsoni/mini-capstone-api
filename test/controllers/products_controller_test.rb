@@ -2,7 +2,7 @@ require "test_helper"
 
 class ProductsControllerTest < ActionDispatch::IntegrationTest
   test "index" do
-    get "/all_products.json"
+    get "/products.json"
     assert_response 200
 
     data = JSON.parse(response.body)
@@ -10,7 +10,7 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "show" do
-    get "/all_products/#{Product.first.id}.json"
+    get "/products/#{Product.first.id}.json"
     assert_response 200
 
     data = JSON.parse(response.body)
@@ -19,12 +19,22 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
 
   test "create" do
     assert_difference "Product.count", 1 do
-      post "/all_products.json",
+      post "/products.json",
         params: {
           name: "test product",
           price: 1,
           image_url: "image.jpg", description: "test description",
         }
     end
+  end
+
+  test "update" do
+    product = Product.first
+    pp Product.first.id
+    patch "/products/#{product.id}.json", params: { name: "Crystal Skull" }
+    assert_response 200
+
+    data = JSON.parse(response.body)
+    assert_equal "Crystal Skull", data["name"]
   end
 end

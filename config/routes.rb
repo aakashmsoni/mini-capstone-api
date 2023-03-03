@@ -19,5 +19,5 @@ Rails.application.routes.draw do
   post "/products" => "products#create"
 
   # Product Update
-  patch "/products.json" => "products#update"
+  patch "/products/:id.json" => "products#update"
 end
