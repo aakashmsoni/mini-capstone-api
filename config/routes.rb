@@ -13,14 +13,14 @@ Rails.application.routes.draw do
   get "/products/:id" => "products#show"
 
   # Product Create
-  post "/products.json" => "products#create"
+  post "/products" => "products#create"
 
   # Product Create Post
   post "/products" => "products#create"
 
   # Product Update
-  patch "/products/:id.json" => "products#update"
+  patch "/products/:id" => "products#update"
 
   # Product Delete
-  delete "products/:id.json" => "products#destroy"
+  delete "products/:id" => "products#destroy"
 end
