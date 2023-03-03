@@ -1,7 +1,7 @@
 class ProductsController < ApplicationController
   protect_from_forgery with: :exception, unless: -> { request.format.json? }
 
-  def all_products
+  def products
     products = Product.all
     render json: products.as_json
   end
