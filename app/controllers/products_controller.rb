@@ -1,7 +1,7 @@
 class ProductsController < ApplicationController
   protect_from_forgery with: :exception, unless: -> { request.format.json? }
 
-  def products
+  def index
     products = Product.all
     render json: products.as_json
   end
@@ -25,6 +25,16 @@ class ProductsController < ApplicationController
       description: params[:description],
     )
     product.save
+    render json: product.as_json
+  end
+
+  def update
+    product = Product.new(
+      name: params[:name],
+      price: params[:price],
+      image_url: params[:image_url],
+      description: params[:description],
+    )
     render json: product.as_json
   end
 end
