@@ -48,8 +48,10 @@ class ProductsController < ApplicationController
     )
 
     if @product.save
+      # happy path
       render template: "products/show"
     else
+      # sad path
       render json: { errors: @product.errors.full_messages }, status: :unprocessable_entity
     end
   end
