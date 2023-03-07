@@ -22,7 +22,7 @@ class ProductsController < ApplicationController
   end
 
   def create
-    product = Product.new(
+    @product = Product.new(
       name: params[:name],
       price: params[:price],
       image_url: params[:image_url],
@@ -33,20 +33,25 @@ class ProductsController < ApplicationController
       render template: "products/show"
     else
       # sad path
-      render json: { errors: @product.errors.full_messages }, status: unprocessable_entity
+      render json: { errors: @product.errors.full_messages }, status: :unprocessable_entity
     end
   end
 
   def update
     product_id = params[:id]
-    product = Product.find(product_id)
-    product.update(
-      name: params[:name] || product.name,
-      price: params[:price] || product.price,
-      image_url: params[:image_url] || product.image_url,
-      description: params[:description] || product.description,
+    @product = Product.find(product_id)
+    @product.update(
+      name: params[:name] || @product.name,
+      price: params[:price] || @product.price,
+      image_url: params[:image_url] || @product.image_url,
+      description: params[:description] || @product.description,
     )
-    render json: product.as_json
+
+    if @product.save
+      render template: "products/show"
+    else
+      render json: { errors: @product.errors.full_messages }, status: :unprocessable_entity
+    end
   end
 
   def destroy
