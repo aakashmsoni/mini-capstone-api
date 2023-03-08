@@ -25,4 +25,4 @@ PATCH http://localhost:3000/products/2.json
 
 
 ### Product Delete
-DELETE http://localhost:3000/products/8.json 
+DELETE http://localhost:3000/products/1.json 
