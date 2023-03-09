@@ -6,16 +6,16 @@ GET http://localhost:3000/products.json
 ### Products Show
 GET http://localhost:3000/products/3.json
 
-### Products Create
-POST http://localhost:3000/products.json
-Content-Type: application/json
+# ### Products Create
+# POST http://localhost:3000/products.json
+# Content-Type: application/json
 
-{
-  "name": "Yeti Mug",
-  "price": 23,
-  "image_url": "http://imghost.com/13556",
-  "description": "Keeps liquids hot or cold"
-}
+# {
+#   "name": "Yeti Mug",
+#   "price": 23,
+#   "image_url": "http://imghost.com/13556",
+#   "description": "Keeps liquids hot or cold"
+# }
 
 ### Products Create Post
 POST http://localhost:3000/products.json
@@ -26,3 +26,20 @@ PATCH http://localhost:3000/products/2.json
 
 ### Product Delete
 DELETE http://localhost:3000/products/1.json 
+
+
+
+### Suppliers Index
+GET http://localhost:3000/suppliers.json
+
+### Suppliers Show
+GET http://localhost:3000/suppliers/1.json 
+
+### Suppliers Create
+POST http://localhost:3000/suppliers.json 
+
+### Suppliers Update
+PATCH http://localhost:3000/suppliers/2.json 
+
+### Suppliers Delete
+DELETE http://localhost:3000/suppliers/2.json 

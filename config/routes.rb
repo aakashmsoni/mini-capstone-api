@@ -27,6 +27,9 @@ Rails.application.routes.draw do
   # Supplier Index
   get "/suppliers" => "suppliers#index"
 
+  # Supplier Show
+  get "/suppliers/:supplier_id" => "suppliers#show"
+
   # Supplier Create
   post "/suppliers" => "suppliers#create"
 
