@@ -5,7 +5,8 @@ class ProductsController < ApplicationController
     # products = Product.all
     # render json: products.as_json
     @products = Product.all
-    render template: "products/index"
+    # render template: "products/index" # <--- uses jsonbuilder gem to display
+    render json: @products, :include => [:supplier]
   end
 
   # def products_under_20
