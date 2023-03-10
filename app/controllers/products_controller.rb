@@ -29,9 +29,11 @@ class ProductsController < ApplicationController
       description: params[:description],
       supplier_id: params[:supplier_id],
       inventory: params[:inventory],
-      images: params[:images],
+      # images: params[:images] <---- breaks code
     )
     if @product.save
+      image = Image.new(product_id: @product.id, url: params[:url])
+      image.save
       # happy path
       render template: "products/show"
     else
@@ -47,9 +49,14 @@ class ProductsController < ApplicationController
       name: params[:name] || @product.name,
       price: params[:price] || @product.price,
       description: params[:description] || @product.description,
+      inventory: params[:inventory] || @product.inventory,
+      supplier_id: params[:supplier_id] || @product.supplier_id,
+      # images: params[:images] || @product.images,
     )
 
     if @product.save
+      image = Image.new(product_id: @product.id, url: params[:url])
+      image.save
       # happy path
       render template: "products/show"
     else
