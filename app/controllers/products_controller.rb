@@ -55,8 +55,6 @@ class ProductsController < ApplicationController
     )
 
     if @product.save
-      image = Image.new(product_id: @product.id, url: params[:url])
-      image.save
       # happy path
       render template: "products/show"
     else
