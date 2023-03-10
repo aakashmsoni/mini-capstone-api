@@ -14,7 +14,8 @@ Content-Type: application/json
   "name": "Baseball bat",
   "price": 15,
   "description": "A wooden baseball bat",
-  "supplier": 2,
+  "supplier_id": 2,
+  "inventory": 11,
   "images": ["https://cdn11.bigcommerce.com/s-2hhnbofc/images/stencil/1280x1280/products/4588/19316/5__59702.1610657598.jpg?c=2", "https://cdn11.bigcommerce.com/s-2hhnbofc/images/stencil/1280x1280/products/4945/20472/6__27094.1632321346.jpg?c=2"]
 }
 
