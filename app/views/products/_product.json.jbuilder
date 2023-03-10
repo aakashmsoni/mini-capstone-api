@@ -5,3 +5,6 @@ json.description product.description
 json.supplier product.supplier
 json.images product.images
 json.inventory product.inventory
+json.is_discounted? product.is_discounted?
+json.tax product.tax
+json.total product.total
