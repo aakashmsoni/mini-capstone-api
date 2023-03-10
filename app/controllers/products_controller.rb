@@ -6,7 +6,7 @@ class ProductsController < ApplicationController
     # render json: products.as_json
     @products = Product.all
     # render template: "products/index" # <--- uses jsonbuilder gem to display
-    render json: @products, :include => [:supplier]
+    render json: @products, :include => [:supplier, :images]
   end
 
   # def products_under_20
@@ -26,8 +26,10 @@ class ProductsController < ApplicationController
     @product = Product.new(
       name: params[:name],
       price: params[:price],
-      image_url: params[:image_url],
       description: params[:description],
+      supplier_id: params[:supplier_id],
+      inventory: params[:inventory],
+      images: params[:images],
     )
     if @product.save
       # happy path
@@ -44,7 +46,6 @@ class ProductsController < ApplicationController
     @product.update(
       name: params[:name] || @product.name,
       price: params[:price] || @product.price,
-      image_url: params[:image_url] || @product.image_url,
       description: params[:description] || @product.description,
     )
 

@@ -4,18 +4,19 @@ GET http://localhost:3000/products.json
 
  
 ### Products Show
-GET http://localhost:3000/products/3.json
+GET http://localhost:3000/products/2.json
 
-# ### Products Create
-# POST http://localhost:3000/products.json
-# Content-Type: application/json
+### Products Create
+POST http://localhost:3000/products.json
+Content-Type: application/json
 
-# {
-#   "name": "Yeti Mug",
-#   "price": 23,
-#   "image_url": "http://imghost.com/13556",
-#   "description": "Keeps liquids hot or cold"
-# }
+{
+  "name": "Baseball bat",
+  "price": 15,
+  "description": "A wooden baseball bat",
+  "supplier": 2,
+  "images": ["https://cdn11.bigcommerce.com/s-2hhnbofc/images/stencil/1280x1280/products/4588/19316/5__59702.1610657598.jpg?c=2", "https://cdn11.bigcommerce.com/s-2hhnbofc/images/stencil/1280x1280/products/4945/20472/6__27094.1632321346.jpg?c=2"]
+}
 
 ### Products Create Post
 POST http://localhost:3000/products.json
