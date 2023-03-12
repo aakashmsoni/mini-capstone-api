@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   # get "/products_under_20", controller: "products", action: "products_under_20"
 
+  # PRODUCT ROUTES
   # Product Index
   get "/products" => "products#index"
 
@@ -24,6 +25,7 @@ Rails.application.routes.draw do
   # Product Delete
   delete "/products/:id" => "products#destroy"
 
+  # SUPPLIER ROUTES
   # Supplier Index
   get "/suppliers" => "suppliers#index"
 
@@ -39,6 +41,7 @@ Rails.application.routes.draw do
   # Supplier Delete
   delete "/suppliers/:supplier_id" => "suppliers#destroy"
 
+  # IMAGE ROUTES
   # Image Index
   get "/images" => "images#index"
 
@@ -48,6 +51,10 @@ Rails.application.routes.draw do
   # Image Create
   post "/images" => "images#create"
 
+  # USER ROUTES
   # User Create
   post "/users" => "users#create"
+
+  # Session Create
+  post "/sessions" => "sessions#create"
 end
