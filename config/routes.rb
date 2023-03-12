@@ -38,4 +38,13 @@ Rails.application.routes.draw do
 
   # Supplier Delete
   delete "/suppliers/:supplier_id" => "suppliers#destroy"
+
+  # Image Index
+  get "/images" => "images#index"
+
+  # Image Show
+  get "/images/:id" => "images#show"
+
+  # Image Create
+  post "/images" => "images#create"
 end

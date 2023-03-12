@@ -45,3 +45,20 @@ PATCH http://localhost:3000/suppliers/2.json
 
 ### Suppliers Delete
 DELETE http://localhost:3000/suppliers/2.json 
+
+### Images Index
+GET http://localhost:3000/images.json
+
+### Images Show
+GET http://localhost:3000/images/1.json
+
+### Images Create
+POST http://localhost:3000/images.json
+Content-Type: application/json
+
+{
+  "url": "http://test.com/image/123.jpeg",
+  "product_id": 2
+}
+
+
