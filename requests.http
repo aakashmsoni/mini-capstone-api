@@ -61,4 +61,13 @@ Content-Type: application/json
   "product_id": 2
 }
 
+### User Create
+POST http://localhost:3000/users.json 
+# Content-Type: application/json
 
+# {
+#   "name": "Karen L",
+#   "email": "karenl@test.com",
+#   "password": "password",
+#   "password_confirmation": "password"
+# }
