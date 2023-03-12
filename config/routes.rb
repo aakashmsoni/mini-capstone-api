@@ -47,4 +47,7 @@ Rails.application.routes.draw do
 
   # Image Create
   post "/images" => "images#create"
+
+  # User Create
+  post "/users" => "users#create"
 end
