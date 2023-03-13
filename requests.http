@@ -1,6 +1,7 @@
 ### Products Index
 
 GET http://localhost:3000/products.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2Nzg4Mzc4MjN9.tQ76u32XkgFMa2yzIJuZwrARG8Pq-Om_Is2EUNPM1Fk
 
  
 ### Products Show
@@ -72,11 +73,11 @@ POST http://localhost:3000/users.json
 #   "password_confirmation": "password"
 # }
 
-### Session Create
+### Session Create (login)
 POST http://localhost:3000/sessions.json
 Content-Type: application/json
 
 {
-  "email": "karenl@test.com",
+  "email": "aakashs@test.com",
   "password": "password"
 }
