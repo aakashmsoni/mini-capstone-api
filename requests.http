@@ -91,6 +91,7 @@ GET http://localhost:3000/orders/1.json
 ### Order Create
 POST http://localhost:3000/orders.json
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2Nzg5MjM0OTJ9.5dWM61RI0Y_YPbizBdGhB5zj6bMvuwdvcfVyj1PFD4s
 
 {
   "user_id": 1,
