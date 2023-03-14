@@ -58,6 +58,12 @@ Rails.application.routes.draw do
   # Session Create
   post "/sessions" => "sessions#create"
 
+  # Order Index
+  get "/orders" => "orders#index"
+  
+  # Order Show
+  get "/orders/:id" => "orders#show"
+
   # Order Create
   post "/orders" => "orders#create"
 end

@@ -82,6 +82,12 @@ Content-Type: application/json
   "password": "password"
 }
 
+### Order Index
+GET http://localhost:3000/orders.json 
+
+### Order Show
+GET http://localhost:3000/orders/1.json
+
 ### Order Create
 POST http://localhost:3000/orders.json
 Content-Type: application/json
