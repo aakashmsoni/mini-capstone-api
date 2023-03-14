@@ -2,7 +2,7 @@ class Product < ApplicationRecord
   validates :name, presence: true, uniqueness: true
   validates :price, presence: true, numericality: { greater_than: 0 }
   validates :description, length: { in: 0..500 }, presence: true
-
+  has_many :orders
   belongs_to :supplier
   # product belongs_to :supplier, therefore supplier_id on products table
   # def supplier
