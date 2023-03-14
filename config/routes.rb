@@ -57,4 +57,7 @@ Rails.application.routes.draw do
 
   # Session Create
   post "/sessions" => "sessions#create"
+
+  # Order Create
+  post "/orders" => "orders#create"
 end
