@@ -84,10 +84,12 @@ Content-Type: application/json
 
 ### Order Index
 GET http://localhost:3000/orders.json 
+Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2Nzg5MjQ2MDh9.FUcpPbaikDXQxZ-9j0_ZesM3jtk5hqJKATTCs1h2Ous
 
 ### Order Show
 GET http://localhost:3000/orders/1.json
+Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2Nzg5MjQ2MDh9.FUcpPbaikDXQxZ-9j0_ZesM3jtk5hqJKATTCs1h2Ous
 
 ### Order Create

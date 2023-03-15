@@ -1,20 +1,26 @@
 class OrdersController < ApplicationController
   def index
-    orders = current_user.orders
-    render json: orders.as_json
+    @orders = current_user.orders
+    render template: "orders/index"
   end
 
   def show
-    order = Order.where(id: params[:id])
-    render json: order.as_json
+    order_id = params[:id]
+    # @order = Order.where(user_id: current_user.id).find_by(id: order_id)
+    @order = current_user.orders.find_by(id: order_id)
+    if @order
+      render template: "orders/show"
+    else
+      render json: { errors: "Order does not exist" }, status: :bad_request
+    end
   end
 
   def create
     product = Product.find_by(id: params[:product_id])
-    subtotal = (params[:quantity] * product.price)
-    tax = (0.09 * (product.price * params[:quantity]))
+    subtotal = product.price * params[:quantity]
+    tax = subtotal * 0.09
     total = subtotal + tax
-    order = Order.new(
+    @order = Order.new(
       user_id: current_user.id,
       product_id: params[:product_id],
       quantity: params[:quantity],
@@ -22,11 +28,10 @@ class OrdersController < ApplicationController
       tax: tax,
       total: total,
     )
-    if order.save
-      order.save
-      render json: order
+    if @order.save
+      render json: @order.as_json
     else
-      render json: { errors: order.errors.full_messages }, status: 422
+      render json: { errors: @order.errors.full_messages }, status: 422
     end
   end
 end
