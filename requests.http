@@ -91,13 +91,9 @@ GET http://localhost:3000/orders/1.json
 ### Order Create
 POST http://localhost:3000/orders.json
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2Nzg5MjM0OTJ9.5dWM61RI0Y_YPbizBdGhB5zj6bMvuwdvcfVyj1PFD4s
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2Nzg5MjQ2MDh9.FUcpPbaikDXQxZ-9j0_ZesM3jtk5hqJKATTCs1h2Ous
 
 {
-  "user_id": 1,
-  "product_id": 2,
-  "quantity": 1,
-  "subtotal": 11,
-  "tax": 1,
-  "total": 12
+  "product_id": 3,
+  "quantity": 2
 }
