@@ -1,10 +1,7 @@
 class ProductsController < ApplicationController
-  
-
   def index
     # products = Product.all
     # render json: products.as_json
-    pp current_user
     @products = Product.all
     render template: "products/index" # <--- uses jsonbuilder gem to display
     # render json: @products, :include => [:supplier, :images, :]
