@@ -5,7 +5,9 @@ class Product < ApplicationRecord
   has_many :orders
   has_many :category_products
   has_many :images
+  has_many :categories, through: :category_products
   belongs_to :supplier
+
   # product belongs_to :supplier, therefore supplier_id on products table
   # def supplier
   #   Supplier.find_by(id: supplier_id)
