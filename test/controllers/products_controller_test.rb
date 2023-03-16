@@ -66,5 +66,7 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
       delete "/products/#{Product.first.id}.json", headers: { "Authorization" => "Bearer #{@jwt}" }
       assert_response 200
     end
+    delete "/products/#{Product.first.id}.json"
+    assert_response 401
   end
 end
