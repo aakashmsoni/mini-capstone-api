@@ -1,4 +1,6 @@
 class ProductsController < ApplicationController
+  before_action :authenticate_admin, except: [:show, :index]
+
   def index
     # products = Product.all
     # render json: products.as_json
