@@ -5,6 +5,11 @@ class ProductsController < ApplicationController
     # products = Product.all
     # render json: products.as_json
     @products = Product.all
+
+    if params[:category]
+       category = Category.find_by(name: params[:category])
+       @products = category.products
+    end
     render template: "products/index" # <--- uses jsonbuilder gem to display
     # render json: @products, :include => [:supplier, :images, :]
   end

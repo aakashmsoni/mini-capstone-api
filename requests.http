@@ -1,5 +1,5 @@
 ### Products Index
-GET http://localhost:3000/products.json
+GET http://localhost:3000/products.json?category=Furniture
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NzkwMTExODZ9.0W0mG_UHcffoUYSlF6kSFTLQITASOXTGQQGrR4_jvYA
 
  
