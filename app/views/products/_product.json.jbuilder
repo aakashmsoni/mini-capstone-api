@@ -3,6 +3,7 @@ json.name product.name
 json.price product.price
 json.description product.description
 json.supplier product.supplier
+json.categories product.categories
 json.images product.images
 json.inventory product.inventory
 json.is_discounted? product.is_discounted?
