@@ -104,11 +104,10 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2Nzg5MjQ2M
 ### CartedProduct Create
 POST http://localhost:3000/cartedproducts.json 
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NzkzMzE1Mzh9.yA1HtMENvpXUJ77J1hkl-iMqLPIypsdVPZLMzjPpyl4
 
 {
-  "user_id": 1,
   "product_id": 2,
   "quantity": 5,
-  "status": "carted",
   "order_id": 1
 }
