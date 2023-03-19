@@ -2,7 +2,8 @@ class Product < ApplicationRecord
   validates :name, presence: true, uniqueness: true
   validates :price, presence: true, numericality: { greater_than: 0 }
   validates :description, length: { in: 0..500 }, presence: true
-  has_many :orders
+  has_many :carted_products
+  has_many :orders, through: :carted_products
   has_many :category_products
   has_many :images
   has_many :categories, through: :category_products

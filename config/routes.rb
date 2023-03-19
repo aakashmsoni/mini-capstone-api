@@ -60,10 +60,13 @@ Rails.application.routes.draw do
 
   # Order Index
   get "/orders" => "orders#index"
-  
+
   # Order Show
   get "/orders/:id" => "orders#show"
 
   # Order Create
   post "/orders" => "orders#create"
+
+  # CartedProduct Create
+  post "/cartedproducts" => "carted_products#create"
 end
