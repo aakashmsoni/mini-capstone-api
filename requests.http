@@ -109,5 +109,4 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NzkzMzE1M
 {
   "product_id": 2,
   "quantity": 5,
-  "order_id": 1
 }
