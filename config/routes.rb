@@ -69,6 +69,7 @@ Rails.application.routes.draw do
 
   # CartedProduct Index
   get "/cartedproducts" => "carted_products#index"
+
   # CartedProduct Create
   post "/cartedproducts" => "carted_products#create"
 end
